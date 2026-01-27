@@ -143,7 +143,7 @@ console.log(a);
 let navi= function(){  //function assigning to some other varaiable 
     console.log("iam navi");   
 }
-navi()  //to acces ew acces by the created varaiable 
+navi()  //to acces we acces by the created varaiable 
 
 
 //example 
