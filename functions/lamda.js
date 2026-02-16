@@ -60,6 +60,8 @@
 // let p = person.call({"gender":"female"})  //in this lamda expe this starement is not going to print 
 // console.log(p);
 
+
+
 //call back function
 function venu (abc){
     console.log("iam venu");

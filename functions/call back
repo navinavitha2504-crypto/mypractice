@@ -1,0 +1,164 @@
+// function navi(name){
+//     console.log("i am from navi func");
+//     console.log(name);   
+// }
+
+// function sai(a){
+//     console.log("i am sai");
+//     console.log(arguments);
+//     console.log(a);
+//     a('abc')
+// }
+// sai(navi)
+
+
+// // multiple callbacks
+// function naveen(name){
+//     console.log(" i am from naveen");
+//     console.log(name);
+// }
+// function navitha(name){
+//     console.log(" i am from navitha");
+//     console.log(name);
+// }
+// function navi(a,b){
+//     console.log("i am navi func");
+//     console.log(arguments);
+//     console.log(a,b);
+//     a('chinna')
+//     b("kumar")
+// }
+// navi(naveen,navitha)
+
+
+// //creating via object
+// function raj(name){
+//     console.log("i am raj");
+//     console.log(name);
+// }
+//  function sai(name){
+//     console.log(" i am sai ");
+//     console.log(name);
+    
+//  }
+//  function navi(myobj){
+//     console.log(" i am navi");
+//     myobj.raj("abc")
+//     myobj.sai("def")
+//  }
+//  let obj={
+//     "raj":raj,
+//     "sai":sai
+//  }
+//  console.log(obj);
+//  navi(obj)
+
+
+
+// //in function itself we create an obj
+// function raj(name){
+//     console.log("i am raj");
+//     console.log(name);
+// }
+//  function sai(name){
+//     console.log(" i am sai ");
+//     console.log(name);
+    
+//  }
+//  function navi(myobj){
+//     console.log(" i am navi");
+//     myobj.raj("abc")
+//     myobj.sai("def")
+//  }
+//  navi({"sai":sai ,"raj":raj})
+
+
+
+
+// //in function itself we create an obj and within obj we write func
+
+//  function navi(myobj){
+//     console.log(" i am navi");
+//     myobj.raj("abc")
+//     myobj.sai("def")
+//  }
+ 
+//  navi({"sai":function(name){
+//     console.log("i am sai");
+//     console.log(name);
+//  } ,"raj":name=>{
+//     console.log("i am raj");
+//     console.log(name);
+//  }
+    
+//  })
+
+
+// function navi(myfun){
+//     console.log("i am navi");
+//     myfun('abc')
+//     myfun("def")
+    
+// }
+// // navi(function(name){
+// //     console.log("i am sai");
+// //     console.log(name);
+    
+    
+// // })
+
+// navi((name)=>{
+//     console.log("i am sai");
+//     console.log(name);
+// },name=>{
+//     console.log("i am naveen");
+//     console.log(name);
+// })
+
+
+// //function chaining
+// function sai(){
+//     console.log("i am sai");
+    
+// }
+// function navi(){
+//     console.log(" i am navi");
+//     return sai
+    
+// }
+// navi()()
+
+// //method chaining
+// function navi(){
+//     console.log(" i am navi");
+//     return {
+//         sai(){
+//             console.log(" i am sai ");  
+//         }
+
+//     }
+    
+// } navi().sai()
+
+function navi(){
+    console.log("i am navi");
+    let obj={
+        "raj":function(a){
+            console.log("i am raj");
+            a("abc")
+            let obj2={
+                "sai":function(){
+                    console.log("i am sai");  
+                }
+            } 
+            return obj2  
+        }
+    }
+    return obj  
+}
+navi().raj((name)=>{
+    console.log("i am raj anonymous");
+    console.log(name);
+    
+    
+}).sai()
